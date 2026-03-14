@@ -56,7 +56,7 @@ This illustrates how **topological relationships between cells may differ from g
 ```
 bonsai-lineage-demo/
 │
-├── Bonsai_data_representation/
+├── Bonsai-data-representation/
 ├── bonsai_inputs/
 ├── bonsai_results/
 ├── bonsai_tmp/
@@ -84,10 +84,11 @@ bonsai-lineage-demo/
 Create a Python environment and install dependencies:
 
 ```bash
-$ git clone https://github.com/franzm64/bonsai-lineage-demo
+$ git clone https://github.com/franzm64/bonsai-lineage-demo.git
 $ cd bonsai-lineage-demo
+$ python -m venv .venv
+$ source .venv/bin/activate
 $ pip install -r requirements.txt
-(activate the newly created environment)
 $ jupyter notebook notebooks/bonsai_exploration.ipynb
 ```
 
@@ -98,6 +99,8 @@ https://github.com/dhdegroot/Bonsai-data-representation
 and placed in this project directory. 
 
 If you use a different version of Bonsai, make sure it builds the tree from scratch.
+
+This package was tested with Python 3.11
 
 ---
 
