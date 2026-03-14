@@ -44,7 +44,7 @@ The figure below compares:
 4. The inferred Bonsai lineage backbone
 
 ![overview](figures/bonsai_overview.png)
-
+Comparison of geometric embeddings (PCA, UMAP) with lineage topology reconstructed by the Bonsai algorithm.
 The colored edges projected onto the embeddings correspond to lineage connections inferred by Bonsai.
 
 This illustrates how **topological relationships between cells may differ from geometric proximity in low-dimensional embeddings**.
