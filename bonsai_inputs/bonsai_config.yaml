@@ -1,0 +1,11 @@
+data_folder: ../bonsai_inputs/data
+dataset: synthetic_demo
+filenames_data: delta.txt,d_delta.txt
+input_is_sanity_output: false
+pickup_intermediate: false
+results_folder: ../bonsai_results
+skip_nnn_reordering: true
+skip_opt_times: true
+skip_redo_starry: true
+tmp_folder: ../bonsai_tmp
+use_knn: -1

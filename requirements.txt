@@ -1,0 +1,9 @@
+numpy
+scikit-learn
+umap-learn
+matplotlib
+networkx
+ete3
+jupyter
+ruamel.yaml
+pandas

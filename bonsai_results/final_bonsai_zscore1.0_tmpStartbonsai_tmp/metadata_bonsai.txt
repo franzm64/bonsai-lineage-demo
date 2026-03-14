@@ -1,0 +1,2 @@
+,nGenes,nCells,reconsTime,zscoreCutoff,coresUsed,finalLoglik,trueLoglik,fullLoglik,remainingRootChildren
+metadata,39,50,116.39805221557617,1.0,1,-2130.0690846960683,,,2
