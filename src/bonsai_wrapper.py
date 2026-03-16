@@ -38,7 +38,6 @@ def run_bonsai(X, project_root):
         "skip_nnn_reordering": True,
         "skip_redo_starry": True,
         "skip_opt_times": True,
-        #"tmp_folder": "/home/franz/Documents/New_job/IMBA_deGroot/bonsai-geometry-study/bonsai_tmp",
         "tmp_folder": str(tmp_dir),
         "pickup_intermediate": False
     }
@@ -49,20 +48,20 @@ def run_bonsai(X, project_root):
         yaml.dump(config, f)
 
     # ---------- run Bonsai ----------
+    # Bonsai commit hash c0ec9948da368b4a069010de41a75e44c03b0800
     result = subprocess.run(
         [
             "python",
             "Bonsai-data-representation/bonsai/bonsai_main.py",
             "--config_filepath",
-            str(config_path)
+            str(config_path),
+            "--no_resume",
+            "True"
         ],
         cwd=project_root,
         # capture_output=True,
         text=True,
     )
-
-    # print("STDOUT:\n", result.stdout)
-    # print("STDERR:\n", result.stderr)
 
     result.check_returncode()
 
@@ -79,7 +78,6 @@ def run_bonsai(X, project_root):
 
     import ete3
 
-    # tree = ete3.Tree(str(tree_path))
     tree = ete3.Tree(str(tree_path), format=1)
 
     G = nx.Graph()

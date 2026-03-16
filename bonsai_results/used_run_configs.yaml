@@ -9,4 +9,4 @@ skip_opt_times: true
 skip_redo_starry: true
 tmp_folder: ../bonsai_tmp
 use_knn: -1
-start_time: 14.03.26_04:37:47
+start_time: 16.03.26_12:34:16
