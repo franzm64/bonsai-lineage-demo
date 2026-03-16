@@ -98,9 +98,10 @@ get the Bonsai upstream repository, set the version and patch it to make sure th
 $ git clone https://github.com/dhdegroot/Bonsai-data-representation.git
 $ cd Bonsai-data-representation
 $ git checkout c0ec9948da368b4a069010de41a75e44c03b0800
-$ git apply ../bonsai-lineage-demo/patches/bonsai_no_resume.patch
+$ git apply ../../bonsai-lineage-demo/patches/bonsai_no_resume.patch
 
 run the notebook in a browser to create all the partial results and the main 4-panel figure
+$ cd ../bonsai-lineage-demo
 $ jupyter notebook notebooks/bonsai_exploration.ipynb
 ```
 
