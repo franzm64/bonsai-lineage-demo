@@ -65,6 +65,8 @@ bonsai-lineage-demo/
 │   └── bonsai_overview.png
 ├── notebooks/
 │   └── bonsai_exploration.ipynb
+├── patches/
+│   └── bonsai_no_resume.patch
 ├── report/
 │   └── topology_vs_geometry_bonsai.pdf
 ├── src/
@@ -81,26 +83,28 @@ bonsai-lineage-demo/
 
 ## Quick start
 
-Create a Python environment and install dependencies:
-
 ```bash
+clone this repository
 $ git clone https://github.com/franzm64/bonsai-lineage-demo.git
+
+create the necessary Python environment with uv
 $ cd bonsai-lineage-demo
-$ python -m venv .venv
+$ uv init --python=3.11
+$ uv venv
 $ source .venv/bin/activate
-$ pip install -r requirements.txt
+$ uv pip install -r requirements.txt
+
+get the Bonsai upstream repository, set the version and patch it to make sure the algorithm starts from scratch
+$ git clone https://github.com/dhdegroot/Bonsai-data-representation.git
+$ cd Bonsai-data-representation
+$ git checkout c0ec9948da368b4a069010de41a75e44c03b0800
+$ git apply ../bonsai-lineage-demo/patches/bonsai_no_resume.patch
+
+run the notebook in a browser to create all the partial results and the main 4-panel figure
 $ jupyter notebook notebooks/bonsai_exploration.ipynb
 ```
 
-The Bonsai reference implementation was cloned from:
-
-https://github.com/dhdegroot/Bonsai-data-representation
-
-and placed in this project directory. 
-
-If you use a different version of Bonsai, make sure it builds the tree from scratch.
-
-This package was tested with Python 3.11
+In case you wish to place the Bonsai reference implementation elsewhere, then re-set its location in the first cell of the jupyter notebook.
 
 ---
 
